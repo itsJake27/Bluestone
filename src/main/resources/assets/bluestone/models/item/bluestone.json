@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-   "layer0": "bluestoneMOD:item/bluestone"
+   "layer0": "bluestone:item/bluestone"
   }
 }
