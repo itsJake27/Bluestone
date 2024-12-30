@@ -22,11 +22,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLUESTONE_BLOCKORE = registerBlock("bluestone_blockore",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-    
-    private static String name;
 
-    private static <T extends Block> RegistryObject <T> registerBlock(String name, Supplier<T> block) {
-        ModBlocks.name = name;
+
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         RegisterBlockItem(name, toReturn);
         return toReturn;

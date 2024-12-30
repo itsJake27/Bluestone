@@ -52,7 +52,7 @@ public class BluestoneMOD {
             event.accept(ModItems.Bluestone);
         }
 
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.BLUESTONE_BLOCKORE);
         }
     }
