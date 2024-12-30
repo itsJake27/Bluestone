@@ -1,6 +1,7 @@
 package net.jake27.bluestone;
 
 import com.mojang.logging.LogUtils;
+import net.jake27.bluestone.block.ModBlocks;
 import net.jake27.bluestone.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -33,6 +34,7 @@ public class BluestoneMOD {
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -48,6 +50,10 @@ public class BluestoneMOD {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.Bluestone);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BLUESTONE_BLOCKORE);
         }
     }
 
