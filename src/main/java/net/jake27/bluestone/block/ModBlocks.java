@@ -5,7 +5,6 @@ import net.jake27.bluestone.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,21 +14,19 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
-import static net.minecraft.world.item.Items.registerBlock;
-
 public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, BluestoneMOD.MOD_ID);
 
-    public static final RegistryObject<Block> BLUESTONE_BLOCKORE = registerBlock("bluestone_blockore",
+    public static final RegistryObject<Block> BLUESTONE_BLOCKORE = registerBlock(
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
 
-    private static <T extends Block> RegistryObject <T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        RegisterBlockItem(name, toReturn);
+    private static <T extends Block> RegistryObject <T> registerBlock(Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register("bluestone_blockore", block);
+        RegisterBlockItem("bluestone_blockore", toReturn);
         return toReturn;
     }
 
