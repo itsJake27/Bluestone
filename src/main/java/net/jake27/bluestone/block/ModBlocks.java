@@ -21,7 +21,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BLUESTONE_BLOCKORE = registerBlock("bluestone_blockore",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.ANVIL)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
