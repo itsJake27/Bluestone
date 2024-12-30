@@ -1,7 +1,7 @@
 {
   "variants:": {
     "": {
-      "Model" : "bluestone:block/bluestone_blockore"
+      "Model": "bluestone:block/bluestone_blockore"
     }
   }
 }
