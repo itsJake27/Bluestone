@@ -59,6 +59,10 @@ public class BluestoneMOD {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(ModBlocks.BLUESTONE_BLOCK);
         }
+
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.RAW_BLUESTONE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

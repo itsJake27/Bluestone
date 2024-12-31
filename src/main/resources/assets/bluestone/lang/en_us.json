@@ -1,6 +1,7 @@
 {
   "block.bluestone.bluestone_blockore": "Bluestone Ore",
   "block.bluestone.bluestone_block": "Bluestone Block",
-  "item.bluestone.bluestone": "Bluestone Ingot"
+  "item.bluestone.bluestone": "Bluestone Ingot",
+  "item.bluestone.raw_bluestone": "Raw Blutestone"
 
 }

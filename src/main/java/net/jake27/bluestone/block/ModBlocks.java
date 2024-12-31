@@ -2,9 +2,11 @@ package net.jake27.bluestone.block;
 
 import net.jake27.bluestone.BluestoneMOD;
 import net.jake27.bluestone.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,7 +23,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, BluestoneMOD.MOD_ID);
 
     public static final RegistryObject<Block> BLUESTONE_BLOCKORE = registerBlock("bluestone_blockore",
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(UniformInt.of(2, 4), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> BLUESTONE_BLOCK = registerBlock("bluestone_block",
